@@ -4,9 +4,15 @@
         xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
 
         <type name="Magento\Framework\Locale\Format">
-            <plugin name="solusoft_pricing" type="Vendor\Module\Plugin\PluginA" sortOrder="10" />
-            <plugin name="vendor_module_pluginb" type="Vendor\Module\Plugin\PluginB" sortOrder="20" />
-            <plugin name="vendor_module_pluginc" type="Vendor\Module\Plugin\PluginC" sortOrder="30" />
+            <plugin name="solusoft_pricing" type="Solusoft\Pricing\Pluging\PlugingFormat" sortOrder="10" />
+        </type>
+
+        <type name="Magento\Directory\Model\PriceCurrency">
+            <plugin name="solusoft_pricing_price_currency" type="Solusoft\Pricing\Pluging\PlugingFormat" sortOrder="20" />
+        </type>
+
+        <type name="Magento\Directory\Model\Currency">
+            <plugin name="solusoft_pricing_currency" type="Solusoft\Pricing\Pluging\PlugingFormat" sortOrder="30" />
         </type>
 
 </config>
